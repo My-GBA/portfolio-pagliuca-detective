@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagliuca | Détective Privé Affaires Conjugales - Suisse</title>
     <meta name="description" content="Détective privé spécialisé en enquêtes conjugales en Suisse. Adultère, divorce, enquêtes pré-matrimoniales. Discrétion et professionnalisme garantis.">
+    <meta name="theme-color" content="#1e3a8a">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <style>
@@ -12,33 +13,41 @@
         .font-display { font-family: 'Playfair Display', serif; }
         .gradient-text { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .glass { background: rgba(15, 15, 30, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(59, 130, 246, 0.2); }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
+        .focus\:not-sr-only:focus { position: static; width: auto; height: auto; padding: 0.75rem 1.5rem; margin: 0; overflow: visible; clip: auto; white-space: normal; }
+        *:focus-visible { outline: 2px solid #3b82f6; outline-offset: 4px; }
     </style>
 </head>
 <body class="bg-black text-white antialiased">
 
+<!-- Skip Link -->
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-6 focus:py-3 focus:bg-blue-600 focus:text-white focus:rounded-lg focus:shadow-2xl">
+    Aller au contenu principal
+</a>
+
 <!-- Navigation -->
-<nav class="fixed top-0 w-full z-50 glass">
+<nav class="fixed top-0 w-full z-50 glass" role="navigation" aria-label="Navigation principale">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div class="flex items-center gap-3">
-            <div class="w-12 h-12 bg-gradient-to-br from-blue-900 to-blue-600 rounded-lg flex items-center justify-center text-2xl">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-900 to-blue-600 rounded-lg flex items-center justify-center text-2xl" role="img" aria-label="Logo Pagliuca Investigation">
                 🔍
             </div>
             <div class="text-xl font-bold">Pagliuca Investigation</div>
         </div>
         <div class="hidden md:flex gap-8 text-sm font-medium text-neutral-400">
-            <a href="#services" class="hover:text-blue-400 transition">Services</a>
-            <a href="#expertise" class="hover:text-blue-400 transition">Expertise</a>
-            <a href="#temoignages" class="hover:text-blue-400 transition">Témoignages</a>
-            <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+            <a href="#services" class="hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded px-2 py-1">Services</a>
+            <a href="#expertise" class="hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded px-2 py-1">Expertise</a>
+            <a href="#temoignages" class="hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded px-2 py-1">Témoignages</a>
+            <a href="#contact" class="hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded px-2 py-1">Contact</a>
         </div>
-        <a href="#contact" class="px-6 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold uppercase rounded-lg transition">
+        <a href="#contact" class="px-6 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold uppercase rounded-lg transition focus:outline-none focus:ring-4 focus:ring-blue-400" aria-label="Me contacter maintenant">
             Me contacter
         </a>
     </div>
 </nav>
 
 <!-- Hero -->
-<section class="min-h-screen flex items-center justify-center pt-20 px-6 bg-gradient-to-b from-neutral-950 via-neutral-900 to-black">
+<section id="main-content" class="min-h-screen flex items-center justify-center pt-20 px-6 bg-gradient-to-b from-neutral-950 via-neutral-900 to-black">
     <div class="max-w-5xl mx-auto text-center">
         <div class="inline-block px-4 py-2 border border-blue-500/30 rounded-full text-xs font-bold tracking-widest text-blue-400 uppercase mb-6">
             Détective Privé Agréé • Suisse Romande
@@ -52,18 +61,18 @@
             <span class="text-blue-400 font-semibold">Discrétion absolue. Preuves légales. Confidentialité garantie.</span>
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contact" class="px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg rounded-xl transition shadow-2xl shadow-blue-600/30">
+            <a href="#contact" class="px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg rounded-xl transition shadow-2xl shadow-blue-600/30 focus:outline-none focus:ring-4 focus:ring-blue-400" aria-label="Demander une consultation confidentielle">
                 Consultation confidentielle
             </a>
-            <a href="tel:+41795725854" class="px-10 py-5 border-2 border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white font-bold text-lg rounded-xl transition">
-                📞 +41 79 572 58 54
+            <a href="tel:+41795725854" class="px-10 py-5 border-2 border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white font-bold text-lg rounded-xl transition focus:outline-none focus:ring-4 focus:ring-blue-400" aria-label="Appeler au +41 79 572 58 54">
+                <span role="img" aria-label="Téléphone">📞</span> +41 79 572 58 54
             </a>
         </div>
     </div>
 </section>
 
 <!-- Stats -->
-<section class="py-20 bg-neutral-900/50">
+<section class="py-20 bg-neutral-900/50" aria-label="Statistiques">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div>
             <div class="text-5xl font-display font-black text-blue-400 mb-2">15+</div>
@@ -85,61 +94,61 @@
 </section>
 
 <!-- Services -->
-<section id="services" class="py-32 px-6">
+<section id="services" class="py-32 px-6" aria-labelledby="services-heading">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-20">
             <h2 class="text-xs font-bold text-blue-400 uppercase tracking-[0.3em] mb-4">Nos Services</h2>
-            <h3 class="text-4xl md:text-6xl font-display font-bold mb-6">Enquêtes Conjugales Discrètes</h3>
+            <h3 id="services-heading" class="text-4xl md:text-6xl font-display font-bold mb-6">Enquêtes Conjugales Discrètes</h3>
             <p class="text-neutral-500 max-w-2xl mx-auto">Solutions d'investigation adaptées à vos besoins personnels</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-10 bg-neutral-900 border border-neutral-800 rounded-3xl hover:border-blue-600/40 transition-all duration-500">
-                <div class="text-5xl mb-6">💔</div>
+            <article class="p-10 bg-neutral-900 border border-neutral-800 rounded-3xl hover:border-blue-600/40 transition-all duration-500">
+                <div class="text-5xl mb-6" role="img" aria-label="Icône cœur brisé">💔</div>
                 <h4 class="text-2xl font-bold mb-4">Suspicion d'Adultère</h4>
                 <p class="text-neutral-400 leading-relaxed">Filatures discrètes, surveillances ciblées et collecte de preuves exploitables juridiquement dans le cadre de procédures de divorce.</p>
-            </div>
+            </article>
 
-            <div class="p-10 bg-neutral-900 border border-neutral-800 rounded-3xl hover:border-blue-600/40 transition-all duration-500">
-                <div class="text-5xl mb-6">⚖️</div>
+            <article class="p-10 bg-neutral-900 border border-neutral-800 rounded-3xl hover:border-blue-600/40 transition-all duration-500">
+                <div class="text-5xl mb-6" role="img" aria-label="Icône balance de justice">⚖️</div>
                 <h4 class="text-2xl font-bold mb-4">Procédures de Divorce</h4>
                 <p class="text-neutral-400 leading-relaxed">Investigations complètes pour soutenir vos démarches juridiques : preuves d'infidélité, garde d'enfants, assistance procédures légales.</p>
-            </div>
+            </article>
 
-            <div class="p-10 bg-neutral-900 border border-neutral-800 rounded-3xl hover:border-blue-600/40 transition-all duration-500">
-                <div class="text-5xl mb-6">💍</div>
+            <article class="p-10 bg-neutral-900 border border-neutral-800 rounded-3xl hover:border-blue-600/40 transition-all duration-500">
+                <div class="text-5xl mb-6" role="img" aria-label="Icône alliances">💍</div>
                 <h4 class="text-2xl font-bold mb-4">Enquêtes Pré-Matrimoniales</h4>
                 <p class="text-neutral-400 leading-relaxed">Vérifications approfondies avant mariage : situation financière, passé personnel, antécédents professionnels et familiaux.</p>
-            </div>
+            </article>
 
-            <div class="p-10 bg-neutral-900 border border-neutral-800 rounded-3xl hover:border-blue-600/40 transition-all duration-500">
-                <div class="text-5xl mb-6">👁️</div>
+            <article class="p-10 bg-neutral-900 border border-neutral-800 rounded-3xl hover:border-blue-600/40 transition-all duration-500">
+                <div class="text-5xl mb-6" role="img" aria-label="Icône œil">👁️</div>
                 <h4 class="text-2xl font-bold mb-4">Surveillance Discrète</h4>
                 <p class="text-neutral-400 leading-relaxed">Filatures professionnelles, surveillance 24/7, techniques d'observation avancées sans éveiller les soupçons.</p>
-            </div>
+            </article>
 
-            <div class="p-10 bg-neutral-900 border border-neutral-800 rounded-3xl hover:border-blue-600/40 transition-all duration-500">
-                <div class="text-5xl mb-6">📋</div>
+            <article class="p-10 bg-neutral-900 border border-neutral-800 rounded-3xl hover:border-blue-600/40 transition-all duration-500">
+                <div class="text-5xl mb-6" role="img" aria-label="Icône presse-papiers">📋</div>
                 <h4 class="text-2xl font-bold mb-4">Collecte de Preuves</h4>
                 <p class="text-neutral-400 leading-relaxed">Documentation complète conforme au cadre légal suisse : photos, vidéos, rapports détaillés exploitables en justice.</p>
-            </div>
+            </article>
 
-            <div class="p-10 bg-neutral-900 border border-neutral-800 rounded-3xl hover:border-blue-600/40 transition-all duration-500">
-                <div class="text-5xl mb-6">🏠</div>
+            <article class="p-10 bg-neutral-900 border border-neutral-800 rounded-3xl hover:border-blue-600/40 transition-all duration-500">
+                <div class="text-5xl mb-6" role="img" aria-label="Icône maison">🏠</div>
                 <h4 class="text-2xl font-bold mb-4">Litiges Familiaux</h4>
                 <p class="text-neutral-400 leading-relaxed">Enquêtes dans le cadre de conflits familiaux : recherche de personnes, vérifications de garde, accompagnement situations sensibles.</p>
-            </div>
+            </article>
         </div>
     </div>
 </section>
 
 <!-- Expertise -->
-<section id="expertise" class="py-32 px-6 bg-neutral-900/50">
+<section id="expertise" class="py-32 px-6 bg-neutral-900/50" aria-labelledby="expertise-heading">
     <div class="max-w-6xl mx-auto">
         <div class="grid md:grid-cols-2 gap-16 items-center">
             <div>
                 <h2 class="text-xs font-bold text-blue-400 uppercase tracking-[0.3em] mb-4">Expertise</h2>
-                <h3 class="text-4xl font-display font-bold mb-6">Expérience Reconnue en Investigation Conjugale</h3>
+                <h3 id="expertise-heading" class="text-4xl font-display font-bold mb-6">Expérience Reconnue en Investigation Conjugale</h3>
                 <div class="space-y-6 text-neutral-300 leading-relaxed">
                     <p>
                         <strong class="text-white">Résolution de plusieurs enquêtes conjugales complexes</strong> avec obtention de preuves exploitables dans des procédures de divorce.
@@ -153,87 +162,87 @@
                 </div>
             </div>
             <div class="space-y-6">
-                <div class="p-6 glass rounded-2xl">
-                    <div class="text-3xl mb-3">🔒</div>
+                <article class="p-6 glass rounded-2xl">
+                    <div class="text-3xl mb-3" role="img" aria-label="Cadenas">🔒</div>
                     <h4 class="text-xl font-bold mb-2">Confidentialité Absolue</h4>
                     <p class="text-sm text-neutral-400">Protection totale de votre vie privée. Aucune information divulguée.</p>
-                </div>
-                <div class="p-6 glass rounded-2xl">
-                    <div class="text-3xl mb-3">⚖️</div>
+                </article>
+                <article class="p-6 glass rounded-2xl">
+                    <div class="text-3xl mb-3" role="img" aria-label="Balance">⚖️</div>
                     <h4 class="text-xl font-bold mb-2">Cadre Légal Strict</h4>
                     <p class="text-sm text-neutral-400">Toutes nos investigations respectent la législation suisse.</p>
-                </div>
-                <div class="p-6 glass rounded-2xl">
-                    <div class="text-3xl mb-3">📊</div>
+                </article>
+                <article class="p-6 glass rounded-2xl">
+                    <div class="text-3xl mb-3" role="img" aria-label="Graphique">📊</div>
                     <h4 class="text-xl font-bold mb-2">Rapports Détaillés</h4>
                     <p class="text-sm text-neutral-400">Documentation complète exploitable juridiquement.</p>
-                </div>
+                </article>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Témoignages -->
-<section id="temoignages" class="py-32 px-6">
+<section id="temoignages" class="py-32 px-6" aria-labelledby="testimonials-heading">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-20">
             <h2 class="text-xs font-bold text-blue-400 uppercase tracking-[0.3em] mb-4">Témoignages</h2>
-            <h3 class="text-4xl md:text-6xl font-display font-bold mb-6">Ils Nous Ont Fait Confiance</h3>
+            <h3 id="testimonials-heading" class="text-4xl md:text-6xl font-display font-bold mb-6">Ils Nous Ont Fait Confiance</h3>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-8 bg-neutral-900 border border-neutral-800 rounded-2xl">
-                <div class="text-yellow-400 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
-                <p class="text-neutral-300 italic mb-6">"Professionnel, discret et très efficace. Grâce à son enquête, j'ai enfin pu connaître la vérité et avancer sereinement."</p>
+            <article class="p-8 bg-neutral-900 border border-neutral-800 rounded-2xl">
+                <div class="text-yellow-400 text-2xl mb-4" role="img" aria-label="Note 5 étoiles sur 5">⭐⭐⭐⭐⭐</div>
+                <blockquote class="text-neutral-300 italic mb-6">"Professionnel, discret et très efficace. Grâce à son enquête, j'ai enfin pu connaître la vérité et avancer sereinement."</blockquote>
                 <div class="text-sm">
                     <p class="text-white font-bold">Cliente</p>
                     <p class="text-neutral-500">Genève</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="p-8 bg-neutral-900 border border-neutral-800 rounded-2xl">
-                <div class="text-yellow-400 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
-                <p class="text-neutral-300 italic mb-6">"Service sérieux et humain. Les preuves fournies ont été très utiles dans ma procédure de divorce."</p>
+            <article class="p-8 bg-neutral-900 border border-neutral-800 rounded-2xl">
+                <div class="text-yellow-400 text-2xl mb-4" role="img" aria-label="Note 5 étoiles sur 5">⭐⭐⭐⭐⭐</div>
+                <blockquote class="text-neutral-300 italic mb-6">"Service sérieux et humain. Les preuves fournies ont été très utiles dans ma procédure de divorce."</blockquote>
                 <div class="text-sm">
                     <p class="text-white font-bold">Client</p>
                     <p class="text-neutral-500">Canton de Vaud</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="p-8 bg-neutral-900 border border-neutral-800 rounded-2xl">
-                <div class="text-yellow-400 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
-                <p class="text-neutral-300 italic mb-6">"Très réactif et à l'écoute. Je recommande pour toute enquête conjugale nécessitant discrétion et professionnalisme."</p>
+            <article class="p-8 bg-neutral-900 border border-neutral-800 rounded-2xl">
+                <div class="text-yellow-400 text-2xl mb-4" role="img" aria-label="Note 5 étoiles sur 5">⭐⭐⭐⭐⭐</div>
+                <blockquote class="text-neutral-300 italic mb-6">"Très réactif et à l'écoute. Je recommande pour toute enquête conjugale nécessitant discrétion et professionnalisme."</blockquote>
                 <div class="text-sm">
                     <p class="text-white font-bold">Cliente</p>
                     <p class="text-neutral-500">Suisse romande</p>
                 </div>
-            </div>
+            </article>
         </div>
     </div>
 </section>
 
 <!-- Contact -->
-<section id="contact" class="py-32 px-6 bg-neutral-900/50">
+<section id="contact" class="py-32 px-6 bg-neutral-900/50" aria-labelledby="contact-heading">
     <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-5xl md:text-7xl font-display font-bold mb-10">
+        <h2 id="contact-heading" class="text-5xl md:text-7xl font-display font-bold mb-10">
             Besoin de<br><span class="gradient-text">réponses ?</span>
         </h2>
         <p class="text-xl text-neutral-400 mb-12">Consultation confidentielle • Intervention rapide • Discrétion garantie</p>
         
         <div class="grid md:grid-cols-2 gap-6 mb-12">
-            <a href="mailto:info@detective-pagliuca.com" class="p-8 glass rounded-2xl hover:border-blue-500 transition group">
-                <div class="text-4xl mb-4">📧</div>
+            <a href="mailto:info@detective-pagliuca.com" class="p-8 glass rounded-2xl hover:border-blue-500 transition group focus:outline-none focus:ring-4 focus:ring-blue-400" aria-label="Envoyer un email à info arobase detective tiret pagliuca point com">
+                <div class="text-4xl mb-4" role="img" aria-label="Email">📧</div>
                 <h4 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition">Email</h4>
                 <p class="text-neutral-400">info@detective-pagliuca.com</p>
             </a>
-            <a href="tel:+41795725854" class="p-8 glass rounded-2xl hover:border-blue-500 transition group">
-                <div class="text-4xl mb-4">📱</div>
+            <a href="tel:+41795725854" class="p-8 glass rounded-2xl hover:border-blue-500 transition group focus:outline-none focus:ring-4 focus:ring-blue-400" aria-label="Appeler au +41 79 572 58 54">
+                <div class="text-4xl mb-4" role="img" aria-label="Téléphone">📱</div>
                 <h4 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition">Téléphone</h4>
                 <p class="text-neutral-400">+41 79 572 58 54</p>
             </a>
         </div>
         
-        <a href="mailto:info@detective-pagliuca.com" class="inline-block px-12 py-6 bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg rounded-2xl transition shadow-2xl shadow-blue-600/30">
+        <a href="mailto:info@detective-pagliuca.com" class="inline-block px-12 py-6 bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg rounded-2xl transition shadow-2xl shadow-blue-600/30 focus:outline-none focus:ring-4 focus:ring-blue-400" aria-label="Me contacter par email maintenant">
             Me Contacter Maintenant
         </a>
 
@@ -245,30 +254,30 @@
 </section>
 
 <!-- Section Livre -->
-<section class="py-20 px-6 bg-gradient-to-b from-black to-neutral-900">
+<section class="py-20 px-6 bg-gradient-to-b from-black to-neutral-900" aria-labelledby="book-heading">
     <div class="max-w-4xl mx-auto text-center">
         <div class="inline-block px-4 py-2 border border-blue-500/30 rounded-full text-xs font-bold tracking-widest text-blue-400 uppercase mb-6">
-            📚 Ressource Exclusive
+            <span role="img" aria-label="Livre">📚</span> Ressource Exclusive
         </div>
-        <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+        <h2 id="book-heading" class="text-4xl md:text-5xl font-display font-bold mb-6">
             Adultère : Les signes réels<br>
             <span class="gradient-text">que personne ne vous explique</span>
         </h2>
         <p class="text-xl text-neutral-400 mb-12 leading-relaxed">
             Découvrez les indicateurs concrets que j'ai identifiés au cours de mes années d'enquêtes. Un guide complet basé sur des cas réels.
         </p>
-        <a href="https://beacons.ai/detective.pagliuca" target="_blank" rel="noopener noreferrer" class="inline-block px-12 py-6 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-bold text-lg rounded-2xl transition shadow-2xl shadow-blue-600/30 transform hover:scale-105">
-            📖 Découvrir le Livre
+        <a href="https://beacons.ai/detective.pagliuca" target="_blank" rel="noopener noreferrer" class="inline-block px-12 py-6 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-bold text-lg rounded-2xl transition shadow-2xl shadow-blue-600/30 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-400" aria-label="Découvrir le livre Adultère Les signes réels que personne ne vous explique - Ouvre dans un nouvel onglet">
+            <span role="img" aria-label="Livre ouvert">📖</span> Découvrir le Livre
         </a>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="py-12 border-t border-neutral-800">
+<footer class="py-12 border-t border-neutral-800" role="contentinfo">
     <div class="max-w-7xl mx-auto px-6 text-center">
         <div class="text-2xl font-display font-bold mb-4">PAGLIUCA INVESTIGATION</div>
         <p class="text-neutral-600 text-sm mb-4">Détective Privé Agréé • Enquêtes Conjugales • Suisse Romande</p>
-        <p class="text-neutral-700 text-xs">© 2026 Pagliuca Investigation. Tous droits réservés. | Portfolio créé par <a href="https://my-gba.com" class="text-blue-500 hover:text-blue-400">My-GBA</a></p>
+        <p class="text-neutral-700 text-xs">© 2026 Pagliuca Investigation. Tous droits réservés. | Portfolio créé par <a href="https://my-gba.com" class="text-blue-500 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">My-GBA</a></p>
     </div>
 </footer>
 
